@@ -12,22 +12,45 @@
     { t: 20, text: "שאף אחד לא מצליח לפתור" },
     { t: 23, text: ":( וזה כולל אותי" },
     { t: 25, text: "זה יוצר בעיה רצינית מבחינה עלילתית" },
-    { t: 27, text: "כי כל הדמויות מתות בפאקינג רבע שעה הראשונה של הסרט" },
-    { t: 30, text: "תקשיבי, רק את יכולה לפתור את החידות שבניתי" },
+    { t: 27.5, text: "כי כל הדמויות מתות בפאקינג רבע שעה הראשונה של הסרט" },
+    { t: 30.5, text: "תקשיבי, רק את יכולה לפתור את החידות שבניתי" },
     { t: 36, text: "ולגלות לי מה הפתרונות" },
     { t: 38, text: "!אני צריך את העזרה שלך, בבקשה" },
     { t: 40, text: "INTENSIFIES המירוץ למיליון " },
   ];
 
-  audio.addEventListener("timeupdate", () => {
-    const current = audio.currentTime;
+let currentSubtitleIndex = -1;
+let typingInterval = null;
 
-    const active = subs
-      .filter(s => current >= s.t)
-      .slice(-1)[0];
+function typeSubtitle(text) {
+  clearInterval(typingInterval);
+  box.textContent = "";
 
-    box.innerText = active ? active.text : "";
+  let i = 0;
+
+  typingInterval = setInterval(() => {
+    box.textContent = text.slice(0, i + 1);
+    i++;
+
+    if (i >= text.length) {
+      clearInterval(typingInterval);
+    }
+  }, 55);
+}
+
+audio.addEventListener("timeupdate", () => {
+  const current = audio.currentTime;
+
+  const activeIndex = subs.findIndex((sub, index) => {
+    const next = subs[index + 1];
+    return current >= sub.t && (!next || current < next.t);
   });
+
+  if (activeIndex !== -1 && activeIndex !== currentSubtitleIndex) {
+    currentSubtitleIndex = activeIndex;
+    typeSubtitle(subs[activeIndex].text);
+  }
+});
 
 const sudokuBtn = document.getElementById("sudokuBtn");
 

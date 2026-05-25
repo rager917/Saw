@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="generic.js" defer></script>
+    <script src="music.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="generic.css">
+    <link rel="stylesheet" href="music.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+<div class="page">
+  <!-- AUDIO / TV SECTION -->
+  <section class="audio-section">
+    <div class="tv">
+      <img src="Saw.jpg" class="screen">
+      <div id="subtitles"></div>
+    </div>
+
+    <div class="controls">
+      <div class="panel">
+        <button class="btn" id="startBtn">START</button>
+        <button class="btn" id="stopBtn">STOP</button>
+        <button class="btn" id="restartBtn">RESET</button>
+      </div>
+    </div>
+
+    <audio id="audio" src="music.wav"></audio>
+  </section>
+
+  <section>
+  <div class="tracks">
+    <div>
+    <audio controls src="dancingqueen.m4a"></audio>
+    </div>
+    <div>
+    <audio controls src="Electioneering.mp3"></audio>
+    </div>
+   <div class="no-audio">
+  AUDIO CORRUPTED
+</div>
+      <div>
+    <audio controls src="ItalySong.mp3"></audio>
+    </div>
+    <div>
+    <audio controls src="OneShortDay.mp3"></audio>
+    </div>
+    <div>
+    <audio controls src="Secret.mp3"></audio>
+    </div>
+  </div>
+  </section>
+</div>
+</body>
+</html>

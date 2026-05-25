@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="generic.js" defer></script>
+    <script src="lucky.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="generic.css">
+    <link rel="stylesheet" href="lucky.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+<div class="page">
+  <!-- AUDIO / TV SECTION -->
+  <section class="audio-section">
+    <div class="tv">
+      <img src="Saw.jpg" class="screen">
+      <div id="subtitles"></div>
+    </div>
+
+    <div class="controls">
+      <div class="panel">
+        <button class="btn" id="startBtn">START</button>
+        <button class="btn" id="stopBtn">STOP</button>
+        <button class="btn" id="restartBtn">RESET</button>
+      </div>
+    </div>
+
+    <audio id="audio" src="lucky.wav"></audio>
+    <audio id="leverSound">
+  <source src="machine_sound.wav" type="audio/mpeg">
+</audio>
+  </section>
+    <section>
+        <div class="slot-machine">
+      <div class="slot" id="n1">?</div>
+      <div class="slot" id="n2">?</div>
+      <div class="slot" id="n3">?</div>
+      <div class="slot" id="n4">?</div>
+      <div class="slot" id="n5">?</div>
+    </div>
+
+    <button id="pullLeverBtn" class="danger-btn">PULL LEVER</button>
+    <input id="luckyAnswer" type="number" placeholder="ENTER VALUE">
+<button id="submitLuckyBtn" class="danger-btn">SUBMIT</button>
+<div id="luckyResult"></div>
+  </section>
+</div>
+</body>
+</html>

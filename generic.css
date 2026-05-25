@@ -26,7 +26,6 @@ body {
   font-family: monospace;
   color: #00ff9f;
   font-size: 22px;
-  letter-spacing: 2px;
   text-transform: uppercase;
 
   text-shadow: 0 0 10px #00ff9f;
@@ -82,6 +81,14 @@ body {
   display: flex;
   gap: 12px;
   
+}
+
+.tv {
+  position: relative;
+  width: min(90vw, 800px);
+  box-shadow: 0 0 30px #00ff9f33;
+  background: black;
+  overflow: visible;
 }
 
 .page {

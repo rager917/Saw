@@ -73,6 +73,7 @@ body {
 #sudoku {
   opacity: 0.35;
   pointer-events: none;
+  margin-bottom: 35px;
 }
 
 #sudoku.active {
@@ -90,11 +91,4 @@ body {
   align-items: center;
 }
 
-.tv {
-  position: relative;
-  width: min(90vw, 800px);
-  box-shadow: 0 0 30px #00ff9f33;
-  background: black;
-  overflow: visible;
-}
 

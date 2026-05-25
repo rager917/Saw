@@ -1,0 +1,14 @@
+.no-audio {
+  color: red;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 26px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+
+  text-shadow:
+    0 0 6px rgba(106,255,255,0.7),
+    0 0 16px rgba(106,255,255,0.4);
+
+  animation: flicker 1.2s infinite;
+}
