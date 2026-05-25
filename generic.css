@@ -26,6 +26,8 @@ body {
   background: black;
 }
 
+
+
 /* image inside TV */
 .screen {
   width: 100%;
@@ -95,15 +97,43 @@ body {
 }
 
 .panel {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
 
   display: flex;
-  flex-direction: row;  /* ensures horizontal */
-  align-items: center;
-  justify-content: center;
-
   gap: 12px;
+  
+}
+
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.danger-btn {
+  background: transparent;
+  border: 2px solid #ff2a2a;
+  color: #ff2a2a;
+
+  padding: 12px 26px;
+  font-family: monospace;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgba(255, 42, 42, 0.2);
+}
+
+.danger-btn:hover {
+  background: #ff2a2a;
+  color: black;
+  box-shadow:
+    0 0 12px #ff2a2a,
+    0 0 28px rgba(255, 42, 42, 0.5);
+
+  transform: scale(1.03);
 }

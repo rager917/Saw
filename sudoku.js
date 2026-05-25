@@ -1,5 +1,4 @@
 
-
   const audio = document.getElementById("audio");
   const box = document.getElementById("subtitles");
 
@@ -28,9 +27,3 @@
 
     box.innerText = active ? active.text : "";
   });
-
-const sudokuBtn = document.getElementById("sudokuBtn");
-
-sudokuBtn.addEventListener("click", () => {
-  window.location.href = "sudoku.html";
-});
