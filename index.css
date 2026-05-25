@@ -1,0 +1,26 @@
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#sudokuBtnSection {
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.tv {
+  position: relative;
+  width: min(90vw, 800px);
+  box-shadow: 0 0 30px #00ff9f33;
+  background: black;
+  overflow: visible;
+}
+

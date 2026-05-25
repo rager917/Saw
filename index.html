@@ -5,27 +5,33 @@
     <script src="index.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="generic.css">
+    <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
     <title>Welcome</title>
 </head>
 <body>
-<div class="wrapper">
+    <div class="page">
 
-  <div class="tv">
-    <img src="Saw.jpg" class="screen">
+  <section class="audio-section">
+    <div class="tv">
+      <img src="Saw.jpg" class="screen">
+      <div id="subtitles"></div>
+    </div>
 
-    <div id="subtitles"></div>
-  </div>
+    <div class="controls">
+      <div class="panel">
+        <button class="btn" id="startBtn">START</button>
+        <button class="btn" id="stopBtn">STOP</button>
+        <button class="btn" id="restartBtn">RESET</button>
+      </div>
+    </div>
 
-<div class="controls">
-  <div class="panel">
-    <button class="btn" id="startBtn">START</button>
-    <button class="btn" id="stopBtn">STOP</button>
-    <button class="btn" id="restartBtn">RESET</button>
-  </div>
+    <audio id="audio" src="sudoku.wav"></audio>
+  </section>
 
+  <section id="sudokuBtnSection">  
   <button id="sudokuBtn" class="danger-btn">START GAME</button>
-</div>
+   </div>
 <audio id="audio">
   <source src="intro.wav" type="audio/mpeg">
 </audio>

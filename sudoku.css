@@ -1,0 +1,100 @@
+#sudoku {
+  display: grid;
+  grid-template-columns: repeat(9, 52px);
+  grid-template-rows: repeat(9, 52px);
+  justify-content: center;
+  margin-top: 30px;
+  background: #f5f1de;
+  padding: 12px;
+  border: 4px solid #1a1a1a;
+  box-shadow:
+    0 0 20px rgba(0,0,0,0.5),
+    inset 0 0 10px rgba(0,0,0,0.2);
+}
+
+body {
+  background: black;
+  font-family: 'IBM Plex Mono', monospace;
+  margin: 0;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.35);
+
+  font-family: 'Comic Sans MS', 'Marker Felt', cursive;
+  font-size: 28px;
+  color: #1f1f1f;
+
+  outline: none;
+}
+
+/* thicker box lines */
+.cell:nth-child(3n) {
+  border-right: 3px solid black;
+}
+
+.cell:nth-child(n+19):nth-child(-n+27),
+.cell:nth-child(n+46):nth-child(-n+54) {
+  border-bottom: 3px solid black;
+}
+
+.fixed {
+  color: #7a1c1c;
+  font-weight: bold;
+  transform: rotate(-2deg);
+}
+
+/* handwritten user entries */
+.cell:not(.fixed) {
+  color: #224488;
+  transform: rotate(1deg);
+}
+
+/* creepy focus */
+.cell:focus {
+  background: rgba(255, 0, 0, 0.08);
+}
+
+#timer {
+  font-family: monospace;
+  font-size: 34px;
+  color: #ff2a2a;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px rgba(255, 42, 42, 0.7);
+}
+
+#sudoku {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+#sudoku.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+.audio-section,
+.sudoku-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tv {
+  position: relative;
+  width: min(90vw, 800px);
+  box-shadow: 0 0 30px #00ff9f33;
+  background: black;
+  overflow: visible;
+}
+
