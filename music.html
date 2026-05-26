@@ -27,31 +27,51 @@
       </div>
     </div>
 
-    <audio id="audio" src="music.wav"></audio>
+    <audio id="audio" src="intro.wav"></audio>
   </section>
 
   <section>
   <div class="tracks">
-    <div>
-    <audio controls src="dancingqueen.m4a"></audio>
-    </div>
-    <div>
-    <audio controls src="Electioneering.mp3"></audio>
-    </div>
+    <div class="track">
+  <button class="track-btn" data-audio="m1">▶ TRACK 01</button>
+  <audio id="m1" src="dancingqueen.m4a"></audio>
+</div>
+<div class="track">
+  <button class="track-btn" data-audio="m2">▶ TRACK 02</button>
+  <audio id="m2" src="Electioneering.mp3"></audio>
+</div>
    <div class="no-audio">
   AUDIO CORRUPTED
 </div>
-      <div>
-    <audio controls src="ItalySong.mp3"></audio>
-    </div>
-    <div>
-    <audio controls src="OneShortDay.mp3"></audio>
-    </div>
-    <div>
-    <audio controls src="Secret.mp3"></audio>
-    </div>
+<div class="track">
+  <button class="track-btn" data-audio="m3">▶ TRACK 03</button>
+  <audio id="m3" src="ItalySong.mp3"></audio>
+</div>
+      <div class="track">
+  <button class="track-btn" data-audio="m4">▶ TRACK 04</button>
+  <audio id="m4" src="OneShortDay.mp3"></audio>
+</div>
+<div class="track">
+  <button class="track-btn" data-audio="m5">▶ TRACK 05</button>
+  <audio id="m5" src="Secret.mp3"></audio>
+</div>
   </div>
   </section>
+
+  <div class="music-code-section">
+  <div class="code-boxes">
+    <input class="code-digit" maxlength="1">
+    <input class="code-digit" maxlength="1">
+    <input class="code-digit fixed-digit" value="0" readonly>
+    <input class="code-digit" maxlength="1">
+    <input class="code-digit" maxlength="1">
+    <input class="code-digit" maxlength="1">
+  </div>
+
+  <button id="checkMusicBtn" class="danger-btn">VERIFY CODE</button>
+
+  <div id="musicResult"></div>
+</div>
 </div>
 </body>
 </html>

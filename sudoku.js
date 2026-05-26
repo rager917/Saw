@@ -6,6 +6,7 @@ let timeLeft = 5 * 60;
 let timerInterval = null;
 
 const startSudokuBtn = document.getElementById("startSudokuBtn");
+const SawSoundTrack = document.getElementById("SawSoundTrack");
 const timerEl = document.getElementById("timer");
 const sudokuEl = document.getElementById("sudoku");
 
@@ -18,7 +19,10 @@ function updateTimer() {
 }
 
 startSudokuBtn.addEventListener("click", () => {
+
   if (sudokuStarted) return;
+    SawSoundTrack.volume = 0.35;
+    SawSoundTrack.play();
 
   sudokuStarted = true;
   sudokuEl.classList.add("active");

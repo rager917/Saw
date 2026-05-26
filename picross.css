@@ -1,0 +1,88 @@
+#picross {
+  display: grid;
+}
+
+.corner,
+.clue,
+.picross-cell {
+  box-sizing: border-box;
+}
+
+.corner {
+  border: 1px solid #00ff9f;
+}
+
+.clue {
+  color: #00ff9f;
+  border: 1px solid #00ff9f55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.top-clue {
+  flex-direction: column;
+}
+
+.left-clue {
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+.picross-cell {
+  width: 38px;
+  height: 38px;
+  background: #111;
+  border: 1px solid #00ff9f55;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.picross-cell.filled {
+  background: #00ff9f;
+  box-shadow: inset 0 0 4px rgba(255,255,255,0.15);
+}
+
+.picross-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;        /* space BETWEEN buttons */
+  margin-top: 30px; /* space ABOVE buttons */
+}
+#picrossResult {
+display: none;
+  margin-top: 30px;
+  padding: 20px;
+
+  color: #ff4d4d;
+  background: rgba(0, 0, 0, 0.85);
+
+  border: 2px solid #ff4d4d;
+  box-shadow:
+    0 0 12px rgba(255,77,77,0.5),
+    inset 0 0 12px rgba(255,77,77,0.1);
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  text-shadow:
+    0 0 8px rgba(255,77,77,0.8);
+
+  max-width: 700px;
+}
+
+#picrossTitle {
+  color: red;
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 30px;
+  text-shadow:
+    0 0 8px red,
+    0 0 16px red;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 4px;
+}
