@@ -91,4 +91,6 @@ body {
   align-items: center;
 }
 
-
+#revealSudokuBtn {
+  display: none;
+}

@@ -135,7 +135,7 @@ document.getElementById("checkSudokuBtn").addEventListener("click", () => {
 
     if (Number(cell.value) !== solutionGrid[r][c]) {
             console.log(r, c, cell.value, solutionGrid[r][c]);
-z
+
       correct = false;
     }
   });
@@ -154,6 +154,19 @@ if (correct) {
 }
 });
 
+document.getElementById("revealSudokuBtn").addEventListener("click", () => {
+  document.querySelectorAll(".cell").forEach(cell => {
+    const row = Number(cell.dataset.row);
+    const col = Number(cell.dataset.col);
 
+    cell.value = solutionGrid[row][col];
+  });
+
+});
+
+const devMode = new URLSearchParams(window.location.search).get("dev") === "true";
+if (devMode) {
+  document.getElementById("revealSudokuBtn").style.display = "block";
+}
 
 renderSudoku();

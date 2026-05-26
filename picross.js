@@ -103,17 +103,24 @@ document.getElementById("checkPicrossBtn").addEventListener("click", () => {
 }
 });
 
-// document.getElementById("revealPicrossBtn").addEventListener("click", () => {
-//   document.querySelectorAll(".picross-cell").forEach(cell => {
-//     const r = Number(cell.dataset.row);
-//     const c = Number(cell.dataset.col);
+const devMode = new URLSearchParams(window.location.search).get("dev") === "true";
+console.log(devMode);
+if (devMode) {
+  document.getElementById("revealPicrossBtn").style.display = "block";
+}
 
-//     if (solution[r][c] === 1) {
-//       cell.classList.add("filled");
-//     } else {
-//       cell.classList.remove("filled");
-//     }
-//   });
-// });
+document.getElementById("revealPicrossBtn").addEventListener("click", () => {
+  document.querySelectorAll(".picross-cell").forEach(cell => {
+    const r = Number(cell.dataset.row);
+    const c = Number(cell.dataset.col);
+
+    if (solution[r][c] === 1) {
+      cell.classList.add("filled");
+    } else {
+      cell.classList.remove("filled");
+    }
+  });
+});
+
 
 renderPicross();
