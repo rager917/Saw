@@ -9,7 +9,7 @@ document.getElementById("checkMusicBtn").addEventListener("click", () => {
     document.getElementById("musicResult").innerText = "ACCESS GRANTED";
 
     setTimeout(() => {
-      window.location.href = "italian.html";
+      window.location.href = "break_time.html";
     }, 1200);
   } else {
     document.getElementById("musicResult").innerText = "INDEX CORRUPTED";
